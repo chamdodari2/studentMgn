@@ -17,6 +17,7 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import studentMgn.Pnel.studentMgnBtn01Left;
 import studentMgn.Pnel.studentMgnBtn01Top;
+import studentMgn.Pnel.studentMgnBtn01Right;
 
 public class StudentMgnBtn01 extends JFrame {
 
@@ -28,7 +29,7 @@ public class StudentMgnBtn01 extends JFrame {
 	private void initialize() {
 		setTitle("학적/학생관리");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(550, 100, 966, 408);
+		setBounds(550, 100, 881, 613);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -51,10 +52,10 @@ public class StudentMgnBtn01 extends JFrame {
 		contentPane.add(pCenter, BorderLayout.CENTER);
 		pCenter.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		JPanel pLeftList = new JPanel();
+		studentMgnBtn01Left pLeftList = new studentMgnBtn01Left();
 		pCenter.add(pLeftList);
 		
-		JPanel pRightList = new JPanel();
+		studentMgnBtn01Right pRightList = new studentMgnBtn01Right();
 		pCenter.add(pRightList);
 	}
 

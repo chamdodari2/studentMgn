@@ -1,15 +1,20 @@
 package studentMgn.Dto;
 
-public class studentManagement {
-	private int stdNo;
-	private String stdName;
-	private Department deptCode;
-	private int grade;
-	private StdState stateCode;
-	private MilitaryState militaryCode;
-	private String idNo;
-	private String hpNo;
-	private String dayNighShift;
+import java.util.List;
+
+public class studentManagement {  //////여기에 점수도 들어가있어야한다!!!! 한꺼번에 3과목이어야하니까 배열이나 리스트로 받아오기!!!!!!!!!!!!!!
+	private int stdNo; //학번
+	private String stdName; //이름
+	private Department deptCode;  //학과코드
+	private int grade;  //학년
+	private StdState stateCode;  //학적코드(재학 등)	
+	private MilitaryState militaryCode; //병역코드(미필 등)
+	private String idNo;	//주민번호
+	private String hpNo;	//휴대폰번호
+	private String dayNighShift;	//주야구분
+//수정중
+	private  List<StudentScore> studentScore;  //성적
+//end	
 	
 	
 	public studentManagement(int stdNo, String stdName, Department deptCode, int grade, StdState stateCode,
