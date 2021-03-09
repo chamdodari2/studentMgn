@@ -12,7 +12,7 @@ import org.junit.runners.MethodSorters;
 
 
 import studentMgn.Dao.Impl.StudentMgnDaoimpl;
-import studentMgn.Dto.studentManagement;
+import studentMgn.Dto.StudentManagement;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class StudentMgnDaoTest {
@@ -26,11 +26,18 @@ public class StudentMgnDaoTest {
 	@Test
 	public void testSelectStdNoStdNameStdStateByAll() {
 		System.out.printf("%s()%n","testSelectStdNoStdNameStdStateByAll");
-		List<studentManagement> stdList = dao.selectStdNoStdNameStdStateByAll();
+		List<StudentManagement> stdList = dao.selectStdNoStdNameStdStateByAll();
+		
 		Assert.assertNotNull(stdList);
-		stdList.stream().forEach(System.out::println); 
-		for(studentManagement s : stdList) {
+		for(StudentManagement s : stdList) {
 			System.out.println(s);
+			
+			
+			
+			
+			//add안넣어서안된당??
+			
+			
 		}
 	}
 

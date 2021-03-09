@@ -1,20 +1,23 @@
 package studentMgn.Dto;
 
-public class StdState  implements Comparable<StdState>{ //기본정렬을 학번으로 한다는뜻 
+public class StdState  { //기본정렬을 학번으로 한다는뜻 
 
-	private int stateCode; // 학적코드
+	private String stateCode; // 학적코드
 	private String stateName; // 학적구분
 	
-	@Override
-	public int compareTo(StdState o) {
-		// TODO Auto-generated method stub
-		return 0;
+	
+	
+	
+	
+	public StdState(String stateCode) {
+		this.stateCode = stateCode;
 	}
 
-	
-	
 
-	public StdState(int stateCode, String stateName) {
+
+
+
+	public StdState(String stateCode, String stateName) {
 		this.stateCode = stateCode;
 		this.stateName = stateName;
 	}
@@ -22,26 +25,21 @@ public class StdState  implements Comparable<StdState>{ //기본정렬을 학번
 
 
 
-	
 
-
-
-
-	public StdState(String string) {
-		// TODO Auto-generated constructor stub
-	}
-
-
-
-
-	public int getStateCode() {
+	public String getStateCode() {
 		return stateCode;
 	}
 
 
-	public void setStateCode(int stateCode) {
+
+
+
+	public void setStateCode(String stateCode) {
 		this.stateCode = stateCode;
 	}
+
+
+
 
 
 	public String getStateName() {
@@ -49,9 +47,15 @@ public class StdState  implements Comparable<StdState>{ //기본정렬을 학번
 	}
 
 
+
+
+
 	public void setStateName(String stateName) {
 		this.stateName = stateName;
 	}
+
+
+
 
 
 	@Override
@@ -59,7 +63,8 @@ public class StdState  implements Comparable<StdState>{ //기본정렬을 학번
 		return String.format("StdState [stateCode=%s, stateName=%s]", stateCode, stateName);
 	}
 	
-	
+
+
 	
 
 

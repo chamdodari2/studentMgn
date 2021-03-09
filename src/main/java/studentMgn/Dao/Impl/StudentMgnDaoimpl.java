@@ -8,10 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import studentMgn.Dao.StudentMgnDao;
-import studentMgn.Dto.Department;
-import studentMgn.Dto.MilitaryState;
 import studentMgn.Dto.StdState;
-import studentMgn.Dto.studentManagement;
+import studentMgn.Dto.StudentManagement;
+import studentMgn.util.JdbcUtil;
 
 public class StudentMgnDaoimpl implements StudentMgnDao {
 	
@@ -28,15 +27,16 @@ public class StudentMgnDaoimpl implements StudentMgnDao {
 
 
 	@Override
-	public List<studentManagement> selectStdNoStdNameStdStateByAll() {
-		String sql = "select stdNo, stdName, deptCode, grade, stateCode, militaryCode, idNo, hpNo, dayNighShift"
-				+ " from studentManagement";
-		try (Connection con = studentMgn.util.JdbcUtil.getConnection();
+	public List<StudentManagement> selectStdNoStdNameStdStateByAll() {
+		String sql = "select stdNo ,stdName,stateName" + 
+				" from studentManagement m join stdState s on m.stateCode =s.stateCode";
+//		String sql = "select stdNo, stdName, stateCode from studentManagement";
+		try (Connection con = JdbcUtil.getConnection();
 				PreparedStatement pstmt = con.prepareStatement(sql);
 				ResultSet rs = pstmt.executeQuery()) {
 
 			if (rs.next()) {
-				List<studentManagement> list = new ArrayList<>();
+				List<StudentManagement> list = new ArrayList<>();
 				do {
 					list.add(getstudentManagement(rs));
 
@@ -51,20 +51,24 @@ public class StudentMgnDaoimpl implements StudentMgnDao {
 		return null;
 	}
 
-	private studentManagement getstudentManagement(ResultSet rs) throws SQLException {
+	private StudentManagement getstudentManagement(ResultSet rs) throws SQLException {
+		//select stdNo ,stdName,stateName from studentManagement m join stdState s on m.stateCode =s.stateCode;
 		// stdNo, stdName, deptCode, grade, stateCode, militaryCode, idNo, hpNo, dayNighShift  이거먼저 해보기!! 조인보다 먼저해봐야한당!!
+		
 		int stdNo = rs.getInt("stdNo");
 		String stdName = rs.getString("stdName");
-		Department deptCode = new Department(rs.getString("deptCode"));
-		int grade= rs.getInt("grade");
-		StdState stdState = new StdState(rs.getString("stateCode"));
-		MilitaryState militaryCode = new MilitaryState(rs.getNString("militaryCode")); 
-		String idNo =rs.getNString("idNo");
-		String hpNo =rs.getString("hpNo");
-		String dayNighShift = rs.getNString("dayNighShift"); // 여기에도 주석풀고 다 적어주야함
+//		Department deptCode = new Department(rs.getString("deptCode"));
+	//	int grade= rs.getInt("grade");
+//		StdState stateCode = new StdState(rs.getString("stateCode")); // // //
+		StdState stateName = new StdState (rs.getString("stateName"));
+//		MilitaryState militaryCode = new MilitaryState(rs.getNString("militaryCode")); 
+//		String idNo =rs.getNString("idNo");
+//		String hpNo =rs.getString("hpNo");
+//		String dayNighShift = rs.getNString("dayNighShift"); // 여기에도 주석풀고 다 적어주야함
 		
 		
-		return new studentManagement(stdNo, stdName, deptCode, grade, stdState, militaryCode, idNo, hpNo, dayNighShift);  // dto 필트를 통한 생성자에  있는 매개변수대로 다 넣어주기!!!!
+		return new StudentManagement(stdNo, stdName,stateName);
+	//			deptName,deptCode, grade, stdState, stdState, militaryCode, militaryCode, idNo, hpNo, dayNighShift, null, null);  // dto 필트를 통한 생성자에  있는 매개변수대로 다 넣어주기!!!!
 	}
 
 

@@ -1,6 +1,6 @@
 package studentMgn.Dto;
 
-public class gradeConvertion {
+public class GradeConvertion {
 	private int scoreMin;
 	private int scoreMax;
 	private String grade;
@@ -11,7 +11,7 @@ public class gradeConvertion {
 
 
 
-	public gradeConvertion(int scoreMin, int scoreMax, String grade, double gradescore) {
+	public GradeConvertion(int scoreMin, int scoreMax, String grade, double gradescore) {
 		this.scoreMin = scoreMin;
 		this.scoreMax = scoreMax;
 		this.grade = grade;

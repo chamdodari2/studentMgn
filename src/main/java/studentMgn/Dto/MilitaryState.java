@@ -5,6 +5,9 @@ public class MilitaryState {
 	private String militaryName;  //병역구분
 	
 	
+	public MilitaryState(String militaryCode) {
+		this.militaryCode = militaryCode;
+	}
 
 	
 
@@ -13,9 +16,6 @@ public class MilitaryState {
 		this.militaryName = militaryName;
 	}
 
-	public MilitaryState(String nString) {
-		// TODO Auto-generated constructor stub
-	}
 
 	public String getMilitaryCode() {
 		return militaryCode;

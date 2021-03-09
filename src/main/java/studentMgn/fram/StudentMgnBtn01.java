@@ -17,7 +17,8 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import studentMgn.Pnel.studentMgnBtn01Left;
 import studentMgn.Pnel.studentMgnBtn01Top;
-import studentMgn.Pnel.studentMgnBtn01Right;
+import studentMgn.Pnel.studentMgnBtn01Right1;
+import studentMgn.Pnel.studentMgnBtn01Right2;
 
 public class StudentMgnBtn01 extends JFrame {
 
@@ -29,11 +30,11 @@ public class StudentMgnBtn01 extends JFrame {
 	private void initialize() {
 		setTitle("학적/학생관리");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(550, 100, 881, 613);
+		setBounds(550, 100, 814, 444);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.setLayout(new BorderLayout(15, 10));
 		
 		JPanel pTop = new JPanel();
 		contentPane.add(pTop, BorderLayout.NORTH);
@@ -50,13 +51,22 @@ public class StudentMgnBtn01 extends JFrame {
 		
 		JPanel pCenter = new JPanel();
 		contentPane.add(pCenter, BorderLayout.CENTER);
-		pCenter.setLayout(new GridLayout(0, 2, 0, 0));
+		pCenter.setLayout(new GridLayout(0, 2, 15, 0));
 		
 		studentMgnBtn01Left pLeftList = new studentMgnBtn01Left();
+		BorderLayout borderLayout = (BorderLayout) pLeftList.getLayout();
+		borderLayout.setHgap(10);
 		pCenter.add(pLeftList);
 		
-		studentMgnBtn01Right pRightList = new studentMgnBtn01Right();
+		JPanel pRightList = new JPanel();
 		pCenter.add(pRightList);
+		pRightList.setLayout(new BorderLayout(10, 0));
+		
+		studentMgnBtn01Right2 pRightSouth = new studentMgnBtn01Right2();
+		pRightList.add(pRightSouth, BorderLayout.SOUTH);
+		
+		studentMgnBtn01Right1 pRightCenter = new studentMgnBtn01Right1();
+		pRightList.add(pRightCenter, BorderLayout.CENTER);
 	}
 
 }
