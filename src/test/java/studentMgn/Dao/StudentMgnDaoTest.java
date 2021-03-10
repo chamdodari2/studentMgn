@@ -35,7 +35,7 @@ public class StudentMgnDaoTest {
 			
 			
 			
-			//add안넣어서안된당??
+
 			
 			
 		}

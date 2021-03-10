@@ -8,7 +8,14 @@ import studentMgn.Dto.StudentManagement;
 public interface StudentMgnDao {
 	
 	//학적,학생관리 
-	List<StudentManagement> selectStdNoStdNameStdStateByAll();  //아무것도 안넣고 조회 눌렀을때 (학번,성명,학적구분) 출력
+	 //아무것도 안넣고 조회 눌렀을때 (학번,성명,학적구분) 출력
+	List<StudentManagement> selectStdNoStdNameStdStateByAll(); 
+	
+	
+	/*1.해당 조건에 맞는 목록 출력, 전체도 있게
+	 * 
+	 * */
+	
 	
 	////일단 이거까지 테스트해보기
 	
