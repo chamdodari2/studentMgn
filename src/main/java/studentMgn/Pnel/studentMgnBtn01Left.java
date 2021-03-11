@@ -9,6 +9,7 @@ import java.awt.FlowLayout;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JScrollPane;
+import java.awt.Font;
 
 public class studentMgnBtn01Left extends JPanel {
 	private JTable table;
@@ -29,6 +30,7 @@ public class studentMgnBtn01Left extends JPanel {
 		add(panel, BorderLayout.NORTH);
 		
 		JLabel lblNewLabel = new JLabel("▼학생목록");
+		lblNewLabel.setFont(new Font("굴림", Font.BOLD, 15));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		panel.add(lblNewLabel);
 		
@@ -42,6 +44,11 @@ public class studentMgnBtn01Left extends JPanel {
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
+				{null, null, null},
+				{null, null, null},
+				{null, null, null},
+				{null, null, null},
+				{null, null, null},
 				{null, null, null},
 				{null, null, null},
 				{null, null, null},

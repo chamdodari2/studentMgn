@@ -32,6 +32,13 @@ public class StudentManagement {  //////여기에 점수도 들어가있어야�
 	
 	
 	
+	public StudentManagement(String dayNighShift) {
+		this.dayNighShift = dayNighShift;
+	}
+
+
+
+
 	public StudentManagement(int stdNo, String stdName, StdState stateCode) {
 		this.stdNo = stdNo;
 		this.stdName = stdName;

@@ -1,83 +1,104 @@
 package studentMgn.Pnel;
 
-import javax.swing.JPanel;
 import java.awt.GridLayout;
-import java.awt.FlowLayout;
-import javax.swing.BoxLayout;
-import java.awt.BorderLayout;
-import javax.swing.JLabel;
-import javax.swing.JComboBox;
+import java.util.ArrayList;
+
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class studentMgnBtn01Top extends JPanel {
+import studentMgn.Dto.GradeConvertion;
+import studentMgn.Dto.StudentManagement;
 
-	/**
-	 * Create the panel.
-	 */
+public class studentMgnBtn01Top extends JPanel {
+	private JPanel pDayNight;
+	private JLabel lblDayNight;
+	private JComboBox<StudentManagement> cBDayNight;  //3.dto클래스 참조
+	private JPanel pDept;
+	private JLabel lblDept;
+	private JComboBox<String> cBDept;   //1. String타입으로 받기로함
+	private JComboBox<GradeConvertion> cBGrade;
+	private JLabel cBStateName;
+	private JPanel pStateName;
+	private JComboBox<String> cBStateName_1;
+	private JPanel pSelectBtn;
+	private JButton btnSelectBtn;
+	private JPanel pGrade;
+	private JLabel lblGrade;   
+	//2. db에서 데이터 가져오기  - 배열로 하는 방법도 있지만 ArrayList로 
+	ArrayList<String> DayNightShift =  new ArrayList<>();
+	ArrayList<String> GradeConvertion =  new ArrayList<>();
+	
+
 	public studentMgnBtn01Top() {
 
 		initialize();
+		
+		
+		
 	}
+
 	private void initialize() {
 		setLayout(new GridLayout(0, 5, 0, 0));
 		
-		JPanel pDN = new JPanel();
-		pDN.setBorder(new EmptyBorder(0, 20, 0, 20));
-		add(pDN);
-		pDN.setLayout(new GridLayout(0, 2, 20, 0));
+		pDayNight = new JPanel();
+		pDayNight.setBorder(new EmptyBorder(0, 20, 0, 20));
+		add(pDayNight);
+		pDayNight.setLayout(new GridLayout(0, 2, 20, 0));
 		
-		JLabel lblDN = new JLabel("주야구분");
-		lblDN.setHorizontalAlignment(SwingConstants.CENTER);
-		pDN.add(lblDN);
+		lblDayNight = new JLabel("주야구분");
+		lblDayNight.setHorizontalAlignment(SwingConstants.CENTER);
+		pDayNight.add(lblDayNight);
 		
-		JComboBox cB01 = new JComboBox();
-		pDN.add(cB01);
+		cBDayNight = new JComboBox<>();
+		pDayNight.add(cBDayNight);
 		
-		JPanel pDept = new JPanel();
+		pDept = new JPanel();
 		pDept.setBorder(new EmptyBorder(0, 20, 0, 20));
 		add(pDept);
 		pDept.setLayout(new GridLayout(0, 2, 20, 0));
 		
-		JLabel lblDept = new JLabel("학과");
+		lblDept = new JLabel("학과");
 		lblDept.setHorizontalAlignment(SwingConstants.CENTER);
 		pDept.add(lblDept);
 		
-		JComboBox cB02 = new JComboBox();
-		pDept.add(cB02);
+		cBDept = new JComboBox<>();
+		pDept.add(cBDept);
 		
-		JPanel pGrade = new JPanel();
+		pGrade = new JPanel();
 		pGrade.setBorder(new EmptyBorder(0, 20, 0, 20));
 		add(pGrade);
 		pGrade.setLayout(new GridLayout(0, 2, 20, 0));
 		
-		JLabel lblGrade = new JLabel("학년");
+		lblGrade = new JLabel("학년");
 		lblGrade.setHorizontalAlignment(SwingConstants.CENTER);
 		pGrade.add(lblGrade);
 		
-		JComboBox cB03 = new JComboBox();
-		pGrade.add(cB03);
+		cBGrade = new JComboBox<>();
+		pGrade.add(cBGrade);
 		
-		JPanel pState = new JPanel();
-		pState.setBorder(new EmptyBorder(0, 20, 0, 20));
-		add(pState);
-		pState.setLayout(new GridLayout(0, 2, 20, 0));
+		pStateName = new JPanel();
+		pStateName.setBorder(new EmptyBorder(0, 20, 0, 20));
+		add(pStateName);
+		pStateName.setLayout(new GridLayout(0, 2, 20, 0));
 		
-		JLabel cB04 = new JLabel("학적구분");
-		cB04.setHorizontalAlignment(SwingConstants.CENTER);
-		pState.add(cB04);
+		cBStateName = new JLabel("학적구분");
+		cBStateName.setHorizontalAlignment(SwingConstants.CENTER);
+		pStateName.add(cBStateName);
 		
-		JComboBox comboBox_3 = new JComboBox();
-		pState.add(comboBox_3);
+		cBStateName_1 = new JComboBox<>();
+		pStateName.add(cBStateName_1);
 		
-		JPanel pSelect = new JPanel();
-		pSelect.setBorder(new EmptyBorder(0, 40, 0, 40));
-		add(pSelect);
-		pSelect.setLayout(new GridLayout(0, 1, 100, 0));
+		pSelectBtn = new JPanel();
+		pSelectBtn.setBorder(new EmptyBorder(0, 40, 0, 40));
+		add(pSelectBtn);
+		pSelectBtn.setLayout(new GridLayout(0, 1, 100, 0));
 		
-		JButton btnNewButton = new JButton("조회");
-		pSelect.add(btnNewButton);
+		btnSelectBtn = new JButton("조회");
+		pSelectBtn.add(btnSelectBtn);
 	}
 
 }

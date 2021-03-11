@@ -30,7 +30,7 @@ public class StudentMgnBtn01 extends JFrame {
 	private void initialize() {
 		setTitle("학적/학생관리");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(550, 100, 814, 444);
+		setBounds(550, 100, 967, 477);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
