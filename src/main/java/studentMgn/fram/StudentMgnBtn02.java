@@ -41,7 +41,7 @@ public class StudentMgnBtn02 extends JFrame {
 		contentPane.add(pCenter, BorderLayout.CENTER);
 		pCenter.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		studentMgnBtn02Right pLeftList = new studentMgnBtn02Right();
+		studentMgnBtn02Right pLeftList = new studentMgnBtn02Right();///이거 수정하기
 		pCenter.add(pLeftList);
 		
 		JPanel pRighList = new JPanel();
