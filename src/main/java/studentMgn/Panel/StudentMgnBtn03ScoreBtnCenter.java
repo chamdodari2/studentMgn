@@ -35,7 +35,7 @@ public class StudentMgnBtn03ScoreBtnCenter extends JPanel {
 		
 		JPanel panel_1 = new JPanel();
 		FlowLayout flowLayout = (FlowLayout) panel_1.getLayout();
-		flowLayout.setVgap(25);
+		flowLayout.setVgap(15);
 		flowLayout.setHgap(30);
 		panel.add(panel_1);
 		
@@ -49,7 +49,7 @@ public class StudentMgnBtn03ScoreBtnCenter extends JPanel {
 		
 		JPanel panel_2 = new JPanel();
 		FlowLayout flowLayout_1 = (FlowLayout) panel_2.getLayout();
-		flowLayout_1.setVgap(25);
+		flowLayout_1.setVgap(15);
 		flowLayout_1.setHgap(30);
 		panel.add(panel_2);
 		
@@ -63,7 +63,7 @@ public class StudentMgnBtn03ScoreBtnCenter extends JPanel {
 		
 		JPanel panel_3 = new JPanel();
 		FlowLayout flowLayout_2 = (FlowLayout) panel_3.getLayout();
-		flowLayout_2.setVgap(25);
+		flowLayout_2.setVgap(15);
 		flowLayout_2.setHgap(30);
 		panel.add(panel_3);
 		
@@ -77,7 +77,7 @@ public class StudentMgnBtn03ScoreBtnCenter extends JPanel {
 		
 		JPanel panel_4 = new JPanel();
 		FlowLayout flowLayout_3 = (FlowLayout) panel_4.getLayout();
-		flowLayout_3.setVgap(25);
+		flowLayout_3.setVgap(15);
 		flowLayout_3.setHgap(30);
 		panel.add(panel_4);
 		
@@ -96,7 +96,7 @@ public class StudentMgnBtn03ScoreBtnCenter extends JPanel {
 		JPanel panel_6 = new JPanel();
 		FlowLayout flowLayout_4 = (FlowLayout) panel_6.getLayout();
 		flowLayout_4.setHgap(30);
-		flowLayout_4.setVgap(25);
+		flowLayout_4.setVgap(15);
 		panel_5.add(panel_6);
 		
 		JLabel label_4 = new JLabel("1과목");
@@ -110,7 +110,7 @@ public class StudentMgnBtn03ScoreBtnCenter extends JPanel {
 		JPanel panel_7 = new JPanel();
 		FlowLayout flowLayout_5 = (FlowLayout) panel_7.getLayout();
 		flowLayout_5.setHgap(30);
-		flowLayout_5.setVgap(25);
+		flowLayout_5.setVgap(15);
 		panel_5.add(panel_7);
 		
 		JLabel label_5 = new JLabel("2과목");
@@ -124,7 +124,7 @@ public class StudentMgnBtn03ScoreBtnCenter extends JPanel {
 		JPanel panel_8 = new JPanel();
 		FlowLayout flowLayout_6 = (FlowLayout) panel_8.getLayout();
 		flowLayout_6.setHgap(30);
-		flowLayout_6.setVgap(25);
+		flowLayout_6.setVgap(15);
 		panel_5.add(panel_8);
 		
 		JLabel label_6 = new JLabel("3과목");
@@ -137,16 +137,6 @@ public class StudentMgnBtn03ScoreBtnCenter extends JPanel {
 		
 		JPanel panel_9 = new JPanel();
 		panel_5.add(panel_9);
-		
-		JPanel panel_10 = new JPanel();
-		FlowLayout flowLayout_7 = (FlowLayout) panel_10.getLayout();
-		flowLayout_7.setVgap(20);
-		add(panel_10, BorderLayout.NORTH);
-		
-		JPanel panel_11 = new JPanel();
-		FlowLayout flowLayout_8 = (FlowLayout) panel_11.getLayout();
-		flowLayout_8.setVgap(20);
-		add(panel_11, BorderLayout.SOUTH);
 	}
 
 }

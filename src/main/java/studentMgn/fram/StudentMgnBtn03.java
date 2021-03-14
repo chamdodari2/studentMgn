@@ -26,7 +26,7 @@ public class StudentMgnBtn03 extends JFrame {
 	private void initialize() {
 		setTitle("학생 조회");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(550, 400, 742, 598);
+		setBounds(550, 400, 742, 381);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));

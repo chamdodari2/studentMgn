@@ -30,7 +30,7 @@ public class StudentMgnBtn03ScoreBtn extends JFrame implements ActionListener {
 	private void initialize() {
 		setTitle("성적수정");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 400, 722, 401);
+		setBounds(100, 400, 568, 325);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -45,10 +45,6 @@ public class StudentMgnBtn03ScoreBtn extends JFrame implements ActionListener {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		pTop.add(lblNewLabel);
 		
-		StudentMgnBtn03ScoreBtnCenter pCenter = new StudentMgnBtn03ScoreBtnCenter();
-		contentPane.add(pCenter, BorderLayout.CENTER);
-		pCenter.setLayout(new GridLayout(0, 1, 0, 0));
-		
 		JPanel pBtnHome = new JPanel();
 		contentPane.add(pBtnHome, BorderLayout.SOUTH);
 		
@@ -60,6 +56,9 @@ public class StudentMgnBtn03ScoreBtn extends JFrame implements ActionListener {
 		JButton button = new JButton("취소");
 		button.setFont(new Font("굴림", Font.BOLD, 25));
 		pBtnHome.add(button);
+		
+		StudentMgnBtn03ScoreBtnCenter pCenter = new StudentMgnBtn03ScoreBtnCenter();
+		contentPane.add(pCenter, BorderLayout.CENTER);
 	}
 
 	public void actionPerformed(ActionEvent e) {
