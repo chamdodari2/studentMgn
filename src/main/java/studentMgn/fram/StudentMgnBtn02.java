@@ -10,7 +10,9 @@ import javax.swing.JLabel;
 import java.awt.GridLayout;
 import javax.swing.SwingConstants;
 import java.awt.Font;
-import studentMgn.Pnel.studentMgnBtn02Right;
+
+import studentMgn.Pnel.StudentMgnBtn02Left;
+import studentMgn.Pnel.StudentMgnBtn02Right;
 
 public class StudentMgnBtn02 extends JFrame {
 
@@ -41,10 +43,10 @@ public class StudentMgnBtn02 extends JFrame {
 		contentPane.add(pCenter, BorderLayout.CENTER);
 		pCenter.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		studentMgnBtn02Right pLeftList = new studentMgnBtn02Right();///이거 수정하기
+		StudentMgnBtn02Left pLeftList = new StudentMgnBtn02Left();///이거 수정하기
 		pCenter.add(pLeftList);
 		
-		JPanel pRighList = new JPanel();
+		StudentMgnBtn02Right pRighList = new StudentMgnBtn02Right();
 		pCenter.add(pRighList);
 	}
 

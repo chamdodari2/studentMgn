@@ -11,13 +11,13 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JScrollPane;
 import java.awt.Font;
 
-public class studentMgnBtn01Left extends JPanel {
+public class StudentMgnBtn01Left extends JPanel {
 	private JTable table;
 
 	/**
 	 * Create the panel.
 	 */
-	public studentMgnBtn01Left() {
+	public StudentMgnBtn01Left() {
 
 		initialize();
 	}

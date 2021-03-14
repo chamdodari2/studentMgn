@@ -6,12 +6,12 @@ import javax.swing.JButton;
 import java.awt.FlowLayout;
 import java.awt.Font;
 
-public class studentMgnBtn01Right2 extends JPanel {
+public class StudentMgnBtn01Right2 extends JPanel {
 
 	/**
 	 * Create the panel.
 	 */
-	public studentMgnBtn01Right2() {
+	public StudentMgnBtn01Right2() {
 
 		initialize();
 	}

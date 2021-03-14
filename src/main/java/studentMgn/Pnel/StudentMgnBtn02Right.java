@@ -13,14 +13,15 @@ import java.awt.Font;
 import javax.swing.border.TitledBorder;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
-public class studentMgnBtn02Right extends JPanel {
+public class StudentMgnBtn02Right extends JPanel {
 	private JTable table;
 
 	/**
 	 * Create the panel.
 	 */
-	public studentMgnBtn02Right() {
+	public StudentMgnBtn02Right() {
 
 		initialize();
 	}
@@ -36,6 +37,14 @@ public class studentMgnBtn02Right extends JPanel {
 		panel.add(scrollPane, BorderLayout.CENTER);
 		
 		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null},
+			},
+			new String[] {
+				"\uD559\uBC88", "\uC131\uBA85", "\uD559\uACFC"
+			}
+		));
 		scrollPane.setViewportView(table);
 		
 		JPanel panel_1 = new JPanel();

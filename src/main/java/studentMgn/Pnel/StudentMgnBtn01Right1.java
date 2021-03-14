@@ -13,7 +13,7 @@ import javax.swing.JButton;
 import com.toedter.calendar.JDateChooser;
 import java.awt.Font;
 
-public class studentMgnBtn01Right1 extends JPanel {
+public class StudentMgnBtn01Right1 extends JPanel {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_5;
@@ -24,7 +24,7 @@ public class studentMgnBtn01Right1 extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public studentMgnBtn01Right1() {
+	public StudentMgnBtn01Right1() {
 
 		initialize();
 	}

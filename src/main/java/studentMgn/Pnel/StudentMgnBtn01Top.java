@@ -13,7 +13,7 @@ import javax.swing.border.EmptyBorder;
 import studentMgn.Dto.GradeConvertion;
 import studentMgn.Dto.StudentManagement;
 
-public class studentMgnBtn01Top extends JPanel {
+public class StudentMgnBtn01Top extends JPanel {
 	private JPanel pDayNight;
 	private JLabel lblDayNight;
 	private JComboBox<StudentManagement> cBDayNight;  //3.dto클래스 참조
@@ -33,7 +33,7 @@ public class studentMgnBtn01Top extends JPanel {
 	ArrayList<String> GradeConvertion =  new ArrayList<>();
 	
 
-	public studentMgnBtn01Top() {
+	public StudentMgnBtn01Top() {
 
 		initialize();
 		

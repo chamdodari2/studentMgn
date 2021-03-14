@@ -15,10 +15,10 @@ import javax.swing.UIManager;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.Font;
-import studentMgn.Pnel.studentMgnBtn01Left;
-import studentMgn.Pnel.studentMgnBtn01Top;
-import studentMgn.Pnel.studentMgnBtn01Right1;
-import studentMgn.Pnel.studentMgnBtn01Right2;
+import studentMgn.Pnel.StudentMgnBtn01Left;
+import studentMgn.Pnel.StudentMgnBtn01Top;
+import studentMgn.Pnel.StudentMgnBtn01Right1;
+import studentMgn.Pnel.StudentMgnBtn01Right2;
 
 public class StudentMgnBtn01 extends JFrame {
 
@@ -46,14 +46,14 @@ public class StudentMgnBtn01 extends JFrame {
 		lblTitle.setFont(new Font("굴림", Font.BOLD, 35));
 		pTop.add(lblTitle);
 		
-		studentMgnBtn01Top pSelect = new studentMgnBtn01Top();
+		StudentMgnBtn01Top pSelect = new StudentMgnBtn01Top();
 		pTop.add(pSelect, BorderLayout.SOUTH);
 		
 		JPanel pCenter = new JPanel();
 		contentPane.add(pCenter, BorderLayout.CENTER);
 		pCenter.setLayout(new GridLayout(0, 2, 15, 0));
 		
-		studentMgnBtn01Left pLeftList = new studentMgnBtn01Left();
+		StudentMgnBtn01Left pLeftList = new StudentMgnBtn01Left();
 		BorderLayout borderLayout = (BorderLayout) pLeftList.getLayout();
 		borderLayout.setHgap(10);
 		pCenter.add(pLeftList);
@@ -62,10 +62,10 @@ public class StudentMgnBtn01 extends JFrame {
 		pCenter.add(pRightList);
 		pRightList.setLayout(new BorderLayout(10, 0));
 		
-		studentMgnBtn01Right2 pRightSouth = new studentMgnBtn01Right2();
+		StudentMgnBtn01Right2 pRightSouth = new StudentMgnBtn01Right2();
 		pRightList.add(pRightSouth, BorderLayout.SOUTH);
 		
-		studentMgnBtn01Right1 pRightCenter = new studentMgnBtn01Right1();
+		StudentMgnBtn01Right1 pRightCenter = new StudentMgnBtn01Right1();
 		pRightList.add(pRightCenter, BorderLayout.CENTER);
 	}
 
