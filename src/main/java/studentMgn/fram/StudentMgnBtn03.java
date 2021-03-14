@@ -14,11 +14,11 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 import studentMgn.Panel.StudentMgnBtn03Top;
 import javax.swing.JButton;
+import studentMgn.Panel.StudentMgnBtn03Center;
 
 public class StudentMgnBtn03 extends JFrame {
 
 	private JPanel contentPane;
-	private JTable tblList;
 
 	public StudentMgnBtn03() {
 		initialize();
@@ -44,20 +44,9 @@ public class StudentMgnBtn03 extends JFrame {
 		StudentMgnBtn03Top pSelect = new StudentMgnBtn03Top();
 		pTop.add(pSelect, BorderLayout.SOUTH);
 		
-		JPanel pCenter = new JPanel();
+		StudentMgnBtn03Center pCenter = new StudentMgnBtn03Center();
 		contentPane.add(pCenter, BorderLayout.CENTER);
 		pCenter.setLayout(new GridLayout(0, 1, 0, 0));
-		
-		tblList = new JTable();
-		tblList.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"학과", "이름", "학번", "과목", "1과목성적", "2과목성적", "3과목성적", "총점", "평균", "평어","평점"
-			}
-		));
-		tblList.setBorder(new EmptyBorder(0, 0, 0, 0));
-		pCenter.add(tblList);
 		
 		JPanel pBtnHome = new JPanel();
 		contentPane.add(pBtnHome, BorderLayout.SOUTH);
