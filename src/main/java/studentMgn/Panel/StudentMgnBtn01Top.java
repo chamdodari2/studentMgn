@@ -1,4 +1,4 @@
-package studentMgn.Pnel;
+package studentMgn.Panel;
 
 import java.awt.GridLayout;
 import java.util.ArrayList;

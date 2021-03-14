@@ -1,4 +1,4 @@
-package studentMgn.Pnel;
+package studentMgn.Panel;
 
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -88,13 +88,6 @@ public class StudentMgnBtn02Left extends JPanel {
 		
 		JComboBox comboBox_3 = new JComboBox();
 		panel_4.add(comboBox_3);
-		
-		JPanel panel_5 = new JPanel();
-		add(panel_5, BorderLayout.SOUTH);
-		
-		JButton btnNewButton = new JButton("Home");
-		btnNewButton.setFont(new Font("굴림", Font.BOLD, 25));
-		panel_5.add(btnNewButton);
 	}
 
 }

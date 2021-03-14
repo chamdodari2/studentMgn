@@ -12,6 +12,8 @@ import java.awt.Font;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
+import studentMgn.Panel.StudentMgnBtn03Top;
+import javax.swing.JButton;
 
 public class StudentMgnBtn03 extends JFrame {
 
@@ -24,7 +26,7 @@ public class StudentMgnBtn03 extends JFrame {
 	private void initialize() {
 		setTitle("학생 조회");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(550, 400, 450, 300);
+		setBounds(550, 400, 742, 598);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -39,7 +41,7 @@ public class StudentMgnBtn03 extends JFrame {
 		lblTItle.setFont(new Font("굴림", Font.BOLD, 35));
 		pTop.add(lblTItle);
 		
-		JPanel pSelect = new JPanel();
+		StudentMgnBtn03Top pSelect = new StudentMgnBtn03Top();
 		pTop.add(pSelect, BorderLayout.SOUTH);
 		
 		JPanel pCenter = new JPanel();
@@ -56,6 +58,13 @@ public class StudentMgnBtn03 extends JFrame {
 		));
 		tblList.setBorder(new EmptyBorder(0, 0, 0, 0));
 		pCenter.add(tblList);
+		
+		JPanel pBtnHome = new JPanel();
+		contentPane.add(pBtnHome, BorderLayout.SOUTH);
+		
+		JButton btnNewButton = new JButton("Home");
+		btnNewButton.setFont(new Font("굴림", Font.BOLD, 25));
+		pBtnHome.add(btnNewButton);
 	}
 
 }

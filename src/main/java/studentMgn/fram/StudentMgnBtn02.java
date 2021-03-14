@@ -6,13 +6,15 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import studentMgn.Panel.StudentMgnBtn02Left;
+import studentMgn.Panel.StudentMgnBtn02Right;
+
 import javax.swing.JLabel;
 import java.awt.GridLayout;
 import javax.swing.SwingConstants;
 import java.awt.Font;
-
-import studentMgn.Pnel.StudentMgnBtn02Left;
-import studentMgn.Pnel.StudentMgnBtn02Right;
+import javax.swing.JButton;
 
 public class StudentMgnBtn02 extends JFrame {
 
@@ -48,6 +50,13 @@ public class StudentMgnBtn02 extends JFrame {
 		
 		StudentMgnBtn02Right pRighList = new StudentMgnBtn02Right();
 		pCenter.add(pRighList);
+		
+		JPanel pBtnHome = new JPanel();
+		contentPane.add(pBtnHome, BorderLayout.SOUTH);
+		
+		JButton btnNewButton = new JButton("Home");
+		btnNewButton.setFont(new Font("굴림", Font.BOLD, 25));
+		pBtnHome.add(btnNewButton);
 	}
 
 }

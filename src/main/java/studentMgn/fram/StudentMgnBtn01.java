@@ -11,14 +11,16 @@ import javax.swing.JLabel;
 import javax.swing.BoxLayout;
 import java.awt.FlowLayout;
 import javax.swing.border.TitledBorder;
+
+import studentMgn.Panel.StudentMgnBtn01Left;
+import studentMgn.Panel.StudentMgnBtn01Right1;
+import studentMgn.Panel.StudentMgnBtn01Right2;
+import studentMgn.Panel.StudentMgnBtn01Top;
+
 import javax.swing.UIManager;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import java.awt.Font;
-import studentMgn.Pnel.StudentMgnBtn01Left;
-import studentMgn.Pnel.StudentMgnBtn01Top;
-import studentMgn.Pnel.StudentMgnBtn01Right1;
-import studentMgn.Pnel.StudentMgnBtn01Right2;
 
 public class StudentMgnBtn01 extends JFrame {
 
