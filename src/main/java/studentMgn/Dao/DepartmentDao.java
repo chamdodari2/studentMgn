@@ -5,11 +5,10 @@ import java.util.List;
 import studentMgn.Dto.StdState;
 import studentMgn.Dto.StudentManagement;
 
-public interface StudentManagementDao {
+public interface DepartmentDao {
 	
-	//학적,학생관리 
-	 //아무것도 안넣고 조회 눌렀을때 (학번,성명,학적구분) 출력
-	List<StudentManagement> selectStudentByAll(); 
+	 //1.아무것도 안넣고 조회 눌렀을때 (학번,성명,학적구분) 출력
+	List<StudentManagement> selectStdNoStdNameStdStateByAll(); 
 	
 	
 	/*1.해당 조건에 맞는 목록 출력, 전체도 있게

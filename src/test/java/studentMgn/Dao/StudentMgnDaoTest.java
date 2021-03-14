@@ -24,9 +24,9 @@ public class StudentMgnDaoTest {
 	}
 
 	@Test
-	public void testSelectStdNoStdNameStdStateByAll() {
-		System.out.printf("%s()%n","testSelectStdNoStdNameStdStateByAll");
-		List<StudentManagement> stdList = dao.selectStdNoStdNameStdStateByAll();
+	public void test01SelectStudentByAll() {
+		System.out.printf("%s()%n","test01SelectStudentByAll");
+		List<StudentManagement> stdList = dao.selectStudentByAll();
 		
 		Assert.assertNotNull(stdList);
 		for(StudentManagement s : stdList) {

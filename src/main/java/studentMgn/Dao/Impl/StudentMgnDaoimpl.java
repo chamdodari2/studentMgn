@@ -27,7 +27,7 @@ public class StudentMgnDaoimpl implements StudentManagementDao {
 
 
 	@Override
-	public List<StudentManagement> selectStdNoStdNameStdStateByAll() {
+	public List<StudentManagement> selectStudentByAll() {
 		String sql = "select stdNo ,stdName,stateName" + 
 				" from studentManagement m join stdState s on m.stateCode =s.stateCode";
 //		String sql = "select stdNo, stdName, stateCode from studentManagement";
