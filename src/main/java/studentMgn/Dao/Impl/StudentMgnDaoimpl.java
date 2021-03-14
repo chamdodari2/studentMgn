@@ -7,12 +7,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import studentMgn.Dao.StudentMgnDao;
+import studentMgn.Dao.StudentManagementDao;
 import studentMgn.Dto.StdState;
 import studentMgn.Dto.StudentManagement;
 import studentMgn.util.JdbcUtil;
 
-public class StudentMgnDaoimpl implements StudentMgnDao {
+public class StudentMgnDaoimpl implements StudentManagementDao {
 	
 	private static final StudentMgnDaoimpl instanse = new StudentMgnDaoimpl();
 

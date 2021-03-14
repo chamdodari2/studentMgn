@@ -12,6 +12,7 @@ import javax.swing.border.EmptyBorder;
 
 import studentMgn.Dto.GradeConvertion;
 import studentMgn.Dto.StudentManagement;
+import java.awt.Font;
 
 public class StudentMgnBtn01Top extends JPanel {
 	private JPanel pDayNight;
@@ -50,6 +51,7 @@ public class StudentMgnBtn01Top extends JPanel {
 		pDayNight.setLayout(new GridLayout(0, 2, 20, 0));
 		
 		lblDayNight = new JLabel("주야구분");
+		lblDayNight.setFont(new Font("굴림", Font.BOLD, 12));
 		lblDayNight.setHorizontalAlignment(SwingConstants.CENTER);
 		pDayNight.add(lblDayNight);
 		
@@ -62,6 +64,7 @@ public class StudentMgnBtn01Top extends JPanel {
 		pDept.setLayout(new GridLayout(0, 2, 20, 0));
 		
 		lblDept = new JLabel("학과");
+		lblDept.setFont(new Font("굴림", Font.BOLD, 12));
 		lblDept.setHorizontalAlignment(SwingConstants.CENTER);
 		pDept.add(lblDept);
 		
@@ -74,6 +77,7 @@ public class StudentMgnBtn01Top extends JPanel {
 		pGrade.setLayout(new GridLayout(0, 2, 20, 0));
 		
 		lblGrade = new JLabel("학년");
+		lblGrade.setFont(new Font("굴림", Font.BOLD, 12));
 		lblGrade.setHorizontalAlignment(SwingConstants.CENTER);
 		pGrade.add(lblGrade);
 		
@@ -86,6 +90,7 @@ public class StudentMgnBtn01Top extends JPanel {
 		pStateName.setLayout(new GridLayout(0, 2, 20, 0));
 		
 		cBStateName = new JLabel("학적구분");
+		cBStateName.setFont(new Font("굴림", Font.BOLD, 12));
 		cBStateName.setHorizontalAlignment(SwingConstants.CENTER);
 		pStateName.add(cBStateName);
 		
@@ -98,6 +103,7 @@ public class StudentMgnBtn01Top extends JPanel {
 		pSelectBtn.setLayout(new GridLayout(0, 1, 100, 0));
 		
 		btnSelectBtn = new JButton("조회");
+		btnSelectBtn.setFont(new Font("굴림", Font.BOLD, 12));
 		pSelectBtn.add(btnSelectBtn);
 	}
 

@@ -5,7 +5,7 @@ import java.util.List;
 import studentMgn.Dto.StdState;
 import studentMgn.Dto.StudentManagement;
 
-public interface StudentMgnDao {
+public interface StudentManagementDao {
 	
 	//학적,학생관리 
 	 //아무것도 안넣고 조회 눌렀을때 (학번,성명,학적구분) 출력

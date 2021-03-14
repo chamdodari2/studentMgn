@@ -16,7 +16,7 @@ import studentMgn.Dto.StudentManagement;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class StudentMgnDaoTest {
-	private static StudentMgnDao dao = StudentMgnDaoimpl.getInstance();
+	private static StudentManagementDao dao = StudentMgnDaoimpl.getInstance();
 
 	@After
 	public void tearDown() throws Exception {
