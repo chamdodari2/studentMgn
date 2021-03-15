@@ -13,6 +13,7 @@ import javax.swing.border.EmptyBorder;
 import studentMgn.Dto.GradeConvertion;
 import studentMgn.Dto.StudentManagement;
 import java.awt.Font;
+import javax.swing.DefaultComboBoxModel;
 
 public class StudentMgnBtn01Top extends JPanel {
 	private JPanel pDayNight;
@@ -43,7 +44,7 @@ public class StudentMgnBtn01Top extends JPanel {
 	}
 
 	private void initialize() {
-		setLayout(new GridLayout(0, 5, 0, 0));
+		setLayout(new GridLayout(0, 5, -30, 0));
 		
 		pDayNight = new JPanel();
 		pDayNight.setBorder(new EmptyBorder(0, 20, 0, 20));
@@ -56,6 +57,8 @@ public class StudentMgnBtn01Top extends JPanel {
 		pDayNight.add(lblDayNight);
 		
 		cBDayNight = new JComboBox<>();
+		cBDayNight.setFont(new Font("굴림", Font.BOLD, 12));
+		cBDayNight.setModel(new DefaultComboBoxModel(new String[] {"주간"}));
 		pDayNight.add(cBDayNight);
 		
 		pDept = new JPanel();
@@ -69,6 +72,7 @@ public class StudentMgnBtn01Top extends JPanel {
 		pDept.add(lblDept);
 		
 		cBDept = new JComboBox<>();
+		cBDept.setModel(new DefaultComboBoxModel(new String[] {"컴퓨터정보"}));
 		pDept.add(cBDept);
 		
 		pGrade = new JPanel();
@@ -82,6 +86,7 @@ public class StudentMgnBtn01Top extends JPanel {
 		pGrade.add(lblGrade);
 		
 		cBGrade = new JComboBox<>();
+		cBGrade.setModel(new DefaultComboBoxModel(new String[] {"1"}));
 		pGrade.add(cBGrade);
 		
 		pStateName = new JPanel();
@@ -95,6 +100,7 @@ public class StudentMgnBtn01Top extends JPanel {
 		pStateName.add(cBStateName);
 		
 		cBStateName_1 = new JComboBox<>();
+		cBStateName_1.setModel(new DefaultComboBoxModel(new String[] {"재학"}));
 		pStateName.add(cBStateName_1);
 		
 		pSelectBtn = new JPanel();

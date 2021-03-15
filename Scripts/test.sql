@@ -35,10 +35,28 @@ select  *from studentmanagement;
 -- 학번,stdNo, stdName, deptCode, grade, stateCode, militaryCode, idNo, hpNo, dayNighShift
 -- 테스트1 sql문 짜기
 
+
+select stdNo,
+stdName,
+deptCode,
+deptName,
+grade,
+stateCode,
+stateName,
+militaryCode,
+idNo,
+gender,
+hpNo,
+dayNightShift,
+subject1,subject2,
+subject3,
+total,
+avg 
+from vw_full_student;
+
 -- 테스트1 뷰 만들기
 create or replace view vw_full_student
 as;
-
 select  s.stdNo, -- 학번
 	s.stdName,  -- 이름
 	s.deptCode,  -- 학과코드
@@ -49,7 +67,9 @@ select  s.stdNo, -- 학번
 	s.militaryCode,  -- 병역코드
 	m.militaryName,  -- 병역구분
 	s.idNo,  -- 주민번호/         성별도 출력되게해야하는디!!! 자바에서  총점,평균이랑 같이 메소드??
-	(select idNo from studentmanagement where idNo = '1') as gender ,
+	if(substr(idNo,7,1)=1,'남','여') as gender,
+-- 	substr(idNo, 7, 1) as gender,
+-- 	(select idNo from studentmanagement where idNo = '1') as gender ,
 -- 	(select idNo as gender from studentmanagement where idNo = '2') as '여',
 	s.hpNo,   -- 연락처
 	s.dayNightShift, -- 주야구분
@@ -80,6 +100,9 @@ select * from militarystate;
 select * from stdstate;
 select  * from studentmanagement;
 select  * from studentscore;
+
+select stdNo, idNo, substr(idNo, 7, 1)
+from studentmanagement;
 
 -- 뷰 만들기 예시
 -- q뷰 새로만들기! 
